@@ -64,19 +64,20 @@ export default function Home() {
         </button>
         <span>F</span>
       </div>
-
-      <div className="w-full flex max-md:flex-col max-md:justify-center max-md:items-center max-md:gap-8 mt-20 justify-center gap-4 px-6">
-        {cities.map((c: any) => {
-          return (
-            <Card
-              key={c.name}
-              city={c}
-              cities={cities}
-              setCities={setCities}
-              isFaren={isToggled}
-            />
-          );
-        })}
+      <div className="flex w-full justify-center">
+        <div className="lg:w-4/5 w-full flex max-md:flex-col max-md:justify-center max-md:items-center max-md:gap-8 mt-20 justify-center gap-4 px-6 flex-wrap">
+          {cities.map((c: any) => {
+            return (
+              <Card
+                key={c.name}
+                city={c}
+                cities={cities}
+                setCities={setCities}
+                isFaren={isToggled}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );
